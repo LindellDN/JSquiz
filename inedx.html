@@ -4,21 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="assests\style.css"></style>
-  <script src="assests\script.js"></script>
-  <title>JavaScript Quiz</title>
+  <link rel="stylesheet" href="assets\style.css"></style>
+  
+  <title>JavaScript Quiz| Home</title>
 </head>
 
 <body>
   
   <header>
-    <!--link highscore page/index-->
-    <div class="high-scores">
+    <div id="high-scores">
       <a href= "">Veiw High-Scores</a>
       </div>
 
-    <div class= "timer" id ="count-down-timer">
-      Time remaining:
+    <div class= "timer" >
+      Timer:<span id ="count-down-timer"></span>
     </div>
   </header>
   <main>
@@ -26,9 +25,16 @@
       Code Quiz Challenge!
     </h1>
     <p>Answer the following quesitons within the time limit to earn a high score. Incorrect answers reduce the time limit, your score is remaining time at the end of the quiz. </p>
-    
-    <div id= "start-quiz">
-    </div>
+    <button id= "start">Start Quiz!</button>
   </main>
+  <div id= "quiz"></div>
+    <div id="questions">
+      <div id= "choice1"></div>
+      <div id= "choice2"></div>
+      <div id= "choice3"></div>
+      <div id= "choice4"></div>
+    </div>
+  </div>  
+  <script src="assets\script.js"></script>
 </body>
 </html>
