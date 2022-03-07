@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets\style.css"></style>
+  
+  <title>JavaScript Quiz| Home</title>
+</head>
+
+<body>
+    <main>
+        <h1>
+            Quiz Complete!
+        </h1>
+        <p>Enter your initals to record your high score!</p>
+        <p>Your final score is <span id = "final-score"></span>.</p>
+        <form id="scoreForm">
+            <input type="text" name="user" id="userId" placeholder="Enter your initals">
+            <button type="submit">Submit</button>    
+            </form>
+        <button id= "retry"><a href="C:\Users\linde\OneDrive\Desktop\projects\JavaScriptquiz\index.html">Retry</a></button>
+        <button onclick= "clearScores()">Reset High-scores</button>
+        
+    </main>
+    <script src="assets\highscore.js"></script>
+</body>

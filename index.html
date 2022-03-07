@@ -13,26 +13,23 @@
   
   <header>
     <div id="high-scores">
-      <a href= "">Veiw High-Scores</a>
+      <a href= "highscore.html">Veiw High-Scores</a>
       </div>
 
     <div class= "timer" >
       Timer:<span id ="count-down-timer"></span>
     </div>
   </header>
-  <main>
+  <main class="homepage">
     <h1>
       Code Quiz Challenge!
     </h1>
     <p>Answer the following quesitons within the time limit to earn a high score. Incorrect answers reduce the time limit, your score is remaining time at the end of the quiz. </p>
     <button id= "start">Start Quiz!</button>
   </main>
-  <div id= "quiz"></div>
-    <div id="questions">
-      <div id= "choice1"></div>
-      <div id= "choice2"></div>
-      <div id= "choice3"></div>
-      <div id= "choice4"></div>
+  <div class= "quiz">
+    <div id="questions"></div>
+      <ol class="choices"></ol>
     </div>
   </div>  
   <script src="assets\script.js"></script>

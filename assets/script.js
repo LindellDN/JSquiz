@@ -1,50 +1,4 @@
-//start button
-var startEL = document.querySelector('#start')
-startEL.addEventListener("click", function() {
-    //add run quiz function here
-    //start countdown function here
-    countdown();
-});
-/*
-function runQuiz() {
-    //remove start button and main text
-    //
-}
-*/
-//set up a timer
-var timerLeftEl = document.querySelector('#count-down-timer')
-function countdown() {
-    var timeLeft = 75;
-    var timeInterval = setInterval(function() {
-        console.log(timeLeft)  
-        timeLeft--
-        document.getElementById("count-down-timer").innerHTML = timeLeft;
-    },1000);
-        if (timeLeft < 1) {
-            endQuiz();
-        };
-
-}    //
-//score screen
-
-
-
-//set up incorrect answer removes time from timer
-
-
-
-
-//set up score counter
-//var highScore = timeRemaining - incorrectChoice * 5;
-
-//set up highscore recorder
-    //initals
-    //high score
-    //save in localstorage
-
-//set up questions
-/*
-var questionsArrary = [
+let questionsArrary = [
     {
         question : "Commonly used data types DO NOT include:",
         choice : [
@@ -86,13 +40,98 @@ var questionsArrary = [
         answer : "quotes"
     },
 ];
+function endQuiz () {
+    if (response === 4) {
 
-//call question from array
-function getQuestion() {
-let currentQuestion = questionsArrary[questionsArraryIndex];
-questionEL.textContent = currentQuestion.question
+    }
 }
+//timer
+var timeLeftEl = document.querySelector('#count-down-timer')
+function countdown() {
+    var timeLeft = 5;
+    var timeInterval = setInterval(function() {
+        console.log(timeLeft)  
+        timeLeft--
+        document.getElementById("count-down-timer").innerHTML = timeLeft;
+    },1000);
+        if (timeLeft < 1) {
+            timeLeft === 0;
+            clearInterval(timeInterval);
+            endQuiz();
+        };
+
+}
+//call question from array
+/*
+function getQuestion() {
+    let currentQuestion = questionsArrary[questionsArraryIndex];
+    questionEL.textContent = currentQuestion.question
+    }
+*/
+//add choices from array
+//make a list elemet of rchoices
+//compare funtion list function
+/*if (listItem.textcontent === question[questionNubmer].answer0{
+    Feedback.setAtribute
+})
+*/
+let questionEl = document.getElementsByName("questions")
+    let choice1El = document.getElementsByName("choice1")
+    let choice2El = document.getElementsByName("choice2")
+    let choice3El = document.getElementsByName("choice3")
+    let choice4El = document.getElementsByName("choice4")
+
+function runQuiz() {
+    // hide start menu
+    document.getElementsByClassName('homepage')[0].style.visibility='hidden';
+    //start timer for quiz
+    countdown();
+    getQuestion();
+    for (i = 0; i < questionsArrary.length; i++) {
+
+        questionEl = questionsArrary[i].question;
+        choice1El = questionsArrary[i].choice[0];
+        choice2El = questionsArrary[i].choice[1];
+        choice3El = questionsArrary[i].choice[2];
+        choice4El = questionsArrary[i].choice[3]
+    }
+    
+} 
+
+//start button
+var startEL = document.querySelector('#start')
+startEL.addEventListener("click", function() {
+    //start the quiz
+    runQuiz();
+    
+});
+//score screen
+
+
+
+//set up incorrect answer removes time from timer
+
+
+
+
+//set up score counter
+//var highScore = timeRemaining - incorrectChoice * 5;
+
+//set up highscore recorder
+    //initals
+    //high score
+    //save in localstorage
+
+
 //call choices from arrary
 //if choice = answer then correct
 //if choice =/= answer then inccorect
-*/
+
+//use submit button to to save to local storage
+//sorting high-scores
+
+//goback link to highscore.index
+
+//button onClick="homepage"
+
+//clear highscore
